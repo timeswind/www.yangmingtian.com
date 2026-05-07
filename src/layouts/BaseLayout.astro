@@ -1,0 +1,153 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Yang Mingtian',
+  description = 'Personal site of Yang Mingtian — manufacturing, software, and international expansion.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main class="prose">
+      <nav class="site-nav">
+        <a href="/">Home</a>
+        <a href="/now">Now</a>
+      </nav>
+      <slot />
+      <footer class="site-footer">
+        <p>© {new Date().getFullYear()} Yang Mingtian · <a href="https://yangmingtian.com">yangmingtian.com</a></p>
+      </footer>
+    </main>
+
+    <style is:global>
+      :root {
+        --fg: #1a1a1a;
+        --muted: #6b6b6b;
+        --bg: #fafaf7;
+        --accent: #b9531a;
+        --rule: #e6e3dc;
+        --max: 720px;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --fg: #ececec;
+          --muted: #a0a0a0;
+          --bg: #131313;
+          --accent: #f0a873;
+          --rule: #2a2a2a;
+        }
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
+          'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+        font-size: 17px;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+        transition: border-color 0.15s ease;
+      }
+
+      a:hover {
+        border-bottom-color: var(--accent);
+      }
+
+      .prose {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 3rem 1.5rem 5rem;
+      }
+
+      .site-nav {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+        font-size: 0.95rem;
+      }
+
+      .site-nav a {
+        border: none;
+        color: var(--muted);
+      }
+
+      .site-nav a:hover {
+        color: var(--accent);
+      }
+
+      h1, h2, h3, h4 {
+        line-height: 1.25;
+        margin: 2.2rem 0 1rem;
+        font-weight: 650;
+      }
+
+      h1 { font-size: 2.1rem; margin-top: 0; }
+      h2 { font-size: 1.45rem; margin-top: 2.6rem; }
+      h3 { font-size: 1.15rem; }
+
+      p, ul, ol { margin: 0 0 1.1rem; }
+
+      ul, ol { padding-left: 1.4rem; }
+
+      li { margin-bottom: 0.35rem; }
+
+      em, i { color: var(--muted); font-style: italic; }
+
+      hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 0.92em;
+        background: color-mix(in srgb, var(--rule) 60%, transparent);
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+      }
+
+      pre {
+        padding: 1rem;
+        border-radius: 8px;
+        overflow-x: auto;
+      }
+
+      .site-footer {
+        margin-top: 4rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--rule);
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      .site-footer a { color: var(--muted); border: none; }
+      .site-footer a:hover { color: var(--accent); }
+    </style>
+  </body>
+</html>

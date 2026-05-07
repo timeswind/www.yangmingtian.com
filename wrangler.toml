@@ -1,0 +1,16 @@
+name = "www-yangmingtian-com"
+compatibility_date = "2025-04-01"
+compatibility_flags = ["nodejs_compat"]
+main = "./dist/_worker.js/index.js"
+assets = { directory = "./dist", binding = "ASSETS" }
+
+# Custom domain routes (uncomment & adjust after first deploy when DNS is ready)
+# [[routes]]
+# pattern = "yangmingtian.com/*"
+# zone_name = "yangmingtian.com"
+# custom_domain = true
+#
+# [[routes]]
+# pattern = "www.yangmingtian.com/*"
+# zone_name = "yangmingtian.com"
+# custom_domain = true

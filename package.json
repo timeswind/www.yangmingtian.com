@@ -1,0 +1,22 @@
+{
+  "name": "www-yangmingtian-com",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "wrangler dev",
+    "deploy": "astro build && wrangler deploy",
+    "astro": "astro",
+    "cf-typegen": "wrangler types"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.5.0",
+    "astro": "^5.7.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.88.0"
+  }
+}
