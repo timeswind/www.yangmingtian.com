@@ -3,12 +3,12 @@ import { getEntry, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const enEntry = await getEntry('pages', 'now');
-const zhEntry = await getEntry('pages', 'now.zh');
+const zhEntry = await getEntry('pages', 'now-zh');
 if (!enEntry) {
   throw new Error('Missing src/content/pages/now.md');
 }
 if (!zhEntry) {
-  throw new Error('Missing src/content/pages/now.zh.md');
+  throw new Error('Missing src/content/pages/now-zh.md');
 }
 const { Content: EnContent } = await render(enEntry);
 const { Content: ZhContent } = await render(zhEntry);
