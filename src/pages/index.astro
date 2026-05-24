@@ -1,5 +1,68 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const recentTracks = [
+  {
+    title: 'Die With A Smile (Salsa Version)',
+    artist: 'Lidice & Marlon Caro',
+    album: 'Die With A Smile (Salsa Version) - Single',
+  },
+  {
+    title: 'It Could Happen To You',
+    artist: 'RYO FUKUI',
+    album: 'Scenery',
+  },
+  {
+    title: 'Marunouchi Sadistic',
+    artist: 'Sheena Ringo',
+    album: 'Muzai Moratorium - Innocence Moratorium',
+  },
+  {
+    title: 'Ma Vie, Mes Rêves',
+    artist: 'Sheena Ringo',
+    album: 'Reimport, Vol. 2 - Civil Aviation Bureau',
+  },
+  {
+    title: 'Boarding Soon',
+    artist: 'Yoyo Sham',
+    album: 'Nothing Is under Control',
+  },
+  {
+    title: 'This City Is Too Jazzy to Be In Love',
+    artist: 'UA × 菊地成孔',
+    album: 'Cure Jazz',
+  },
+  {
+    title: 'Spain',
+    artist: 'Chick Corea',
+    album: 'Light As a Feather',
+  },
+  {
+    title: 'just the two of us (apple music home session)',
+    artist: 'hard life',
+    album: 'apple music home session: easy life',
+  },
+  {
+    title: 'Middleaged Man',
+    artist: 'James Li',
+    album: 'SHI RI TAN',
+  },
+  {
+    title: 'Deadman',
+    artist: 'KUN',
+    album: 'KUN',
+  },
+  {
+    title: 'Jasmine',
+    artist: 'KUN',
+    album: 'KUN',
+  },
+  {
+    title: 'No Verao, As Noites',
+    artist: 'Sheena Ringo',
+    album: 'No verao, as noites / God, Nor Buddha - Single',
+  },
+];
 ---
 
 <BaseLayout title="Yang Mingtian">
@@ -11,4 +74,126 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <p>
     See <a href="/now">what I’m currently focused on</a>.
   </p>
+
+  <section class="playlist" aria-labelledby="playlist-title">
+    <div class="playlist-header">
+      <div>
+        <p class="eyebrow">Recently played</p>
+        <h2 id="playlist-title">On repeat lately</h2>
+      </div>
+      <span class="playlist-note">Apple Music · updated May 24, 2026</span>
+    </div>
+
+    <ol class="track-list">
+      {recentTracks.map((track, index) => (
+        <li class="track">
+          <span class="track-number">{String(index + 1).padStart(2, '0')}</span>
+          <span class="track-main">
+            <strong>{track.title}</strong>
+            <span>{track.artist}</span>
+          </span>
+          <span class="track-album">{track.album}</span>
+        </li>
+      ))}
+    </ol>
+  </section>
 </BaseLayout>
+
+<style>
+  .playlist {
+    margin-top: 3.25rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .playlist-header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.15rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--muted);
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .playlist h2 {
+    margin: 0;
+  }
+
+  .playlist-note {
+    color: var(--muted);
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .track-list {
+    display: grid;
+    gap: 0.2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .track {
+    display: grid;
+    grid-template-columns: 2.25rem minmax(0, 1.1fr) minmax(10rem, 0.9fr);
+    gap: 0.9rem;
+    align-items: baseline;
+    padding: 0.68rem 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--rule) 70%, transparent);
+  }
+
+  .track-number,
+  .track-album,
+  .track-main span {
+    color: var(--muted);
+    font-size: 0.88rem;
+  }
+
+  .track-number {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .track-main {
+    display: grid;
+    gap: 0.18rem;
+    min-width: 0;
+  }
+
+  .track-main strong {
+    font-weight: 620;
+  }
+
+  .track-album {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 680px) {
+    .playlist-header {
+      display: block;
+    }
+
+    .playlist-note {
+      display: block;
+      margin-top: 0.4rem;
+      white-space: normal;
+    }
+
+    .track {
+      grid-template-columns: 2rem minmax(0, 1fr);
+    }
+
+    .track-album {
+      grid-column: 2;
+      white-space: normal;
+    }
+  }
+</style>
