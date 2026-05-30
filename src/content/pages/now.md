@@ -1,6 +1,6 @@
 # Now
 
-_Last updated: May 24, 2026_
+_Last updated: May 30, 2026_
 
 I’m currently focused on the overlap between manufacturing, software, international business, and practical infrastructure.
 
@@ -12,15 +12,23 @@ A lot of my work sits in the middle layer: making technical capability easier to
 
 I’m working on how Chinese manufacturing companies can present themselves more clearly to international customers.
 
-That includes product positioning, English terminology, technical content, SEO structure, and website systems for industrial categories like HVAC, hydronic heating, and advanced manufacturing components.
+Recently this has meant very practical work for HVAC and hydronic heating companies: product positioning, English terminology, technical content, SEO structure, lead forms, conversion tracking, and website systems that make industrial products easier to evaluate from overseas.
 
 The goal is not just to make things look polished. It is to help strong technical companies become easier to understand, easier to trust, and easier to work with.
+
+### Marketing, analytics, and the path from click to lead
+
+I’m spending more time on the connective tissue between marketing and actual business operations.
+
+That includes Google Ads campaigns, conversion tags, lead form behavior, Tag Assistant debugging, and the less glamorous details that decide whether a campaign can be measured honestly.
+
+Recently I’ve been tightening this loop for industrial websites: making sure the right tags are installed, form submissions are trackable, and the marketing system reflects real buyer intent instead of vanity traffic.
 
 ### Manufacturing and semiconductor-related research
 
 I’m interested in advanced manufacturing supply chains, especially the less visible components that sit inside industrial and semiconductor equipment.
 
-Recently this has included areas like ceramic heaters, wafer heaters, electrostatic chucks, thermocouples, RTDs, and flexible heaters.
+Recently this has included areas like ceramic heaters, wafer heaters, electrostatic chucks, thermocouples, RTDs, flexible heaters, control valves, and data-center cooling components.
 
 I like these niche categories because the surface often looks boring, but the real value is hidden in engineering details, reliability, production capability, and how well a company can explain what it knows.
 
@@ -34,13 +42,13 @@ A recurring theme is turning scattered operational data into something teams can
 
 ### Infrastructure and self-hosted workflows
 
-I also spend time on practical infrastructure: deployment, DNS, proxy routing, router configuration, and self-hosted systems.
+I also spend time on practical infrastructure: deployment, DNS, proxy routing, router configuration, load balancers, monitoring, and self-hosted systems.
 
 This work is not glamorous, but I enjoy it. It is where software meets daily reliability: configuration, security, debugging, and making sure the systems I depend on behave predictably.
 
 ### AI-native workflows
 
-I’m experimenting with AI agents, automation, sandboxed execution, documentation workflows, and ways to turn daily work into reusable knowledge.
+I’m experimenting with AI agents, automation, activity recording, sandboxed execution, documentation workflows, and ways to turn daily work into reusable knowledge.
 
 The question I keep coming back to is: how can AI become part of a real work system, instead of just being another chat box?
 
@@ -51,11 +59,13 @@ Right now I’m learning more about:
 - international B2B marketing
 - technical writing for manufacturing companies
 - SEO and content architecture
+- Google Ads, conversion tracking, and measurement hygiene
 - semiconductor and advanced manufacturing supply chains
+- industrial cooling, valves, and hydronic control systems
 - CRM and business process design
 - project analytics and internal productivity tools
-- deployment, DNS, proxy routing, and self-hosted infrastructure
-- AI-assisted software development
+- deployment, DNS, proxy routing, cloud networking, and self-hosted infrastructure
+- AI-assisted software development and memory workflows
 
 A recurring theme for me is translation.
 
@@ -63,6 +73,7 @@ Not only translation between languages, but translation between worlds:
 
 - factory floor → customer-facing website
 - technical capability → market trust
+- campaign traffic → qualified business follow-up
 - scattered business records → operational clarity
 - infrastructure complexity → reliable daily systems
 - intuition → repeatable process

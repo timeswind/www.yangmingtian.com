@@ -72,8 +72,41 @@ const recentTracks = [
     tools and clearer ways for industrial businesses to communicate with the world.
   </p>
   <p>
+    Recently I’ve been moving between industrial B2B growth work, analytics and conversion
+    tracking, practical infrastructure, and the unglamorous systems that make operations easier
+    to trust.
+  </p>
+  <p>
     See <a href="/now">what I’m currently focused on</a>.
   </p>
+
+  <section class="current-work" aria-labelledby="current-work-title">
+    <p class="eyebrow">Current work</p>
+    <h2 id="current-work-title">What I’m paying attention to now</h2>
+    <div class="work-grid">
+      <article>
+        <h3>Industrial B2B websites</h3>
+        <p>
+          Making HVAC and hydronic products easier for international customers to understand,
+          compare, and trust.
+        </p>
+      </article>
+      <article>
+        <h3>Marketing systems</h3>
+        <p>
+          Tightening Google Ads, conversion tags, lead forms, and the feedback loop between
+          traffic, forms, and real business follow-up.
+        </p>
+      </article>
+      <article>
+        <h3>Operational infrastructure</h3>
+        <p>
+          Debugging the practical layer: cloud load balancers, deployment details, analytics,
+          routing, and self-hosted systems.
+        </p>
+      </article>
+    </div>
+  </section>
 
   <section class="playlist" aria-labelledby="playlist-title">
     <div class="playlist-header">
@@ -100,6 +133,41 @@ const recentTracks = [
 </BaseLayout>
 
 <style>
+  .current-work {
+    margin-top: 3.25rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .current-work h2 {
+    margin-top: 0;
+  }
+
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.1rem;
+    margin-top: 1.1rem;
+  }
+
+  .work-grid article {
+    padding: 1rem;
+    border: 1px solid color-mix(in srgb, var(--rule) 82%, transparent);
+    border-radius: 0.85rem;
+    background: color-mix(in srgb, var(--surface) 88%, transparent);
+  }
+
+  .work-grid h3 {
+    margin: 0 0 0.55rem;
+    font-size: 1rem;
+  }
+
+  .work-grid p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.94rem;
+  }
+
   .playlist {
     margin-top: 3.25rem;
     padding-top: 2rem;
@@ -177,6 +245,10 @@ const recentTracks = [
   }
 
   @media (max-width: 680px) {
+    .work-grid {
+      grid-template-columns: 1fr;
+    }
+
     .playlist-header {
       display: block;
     }
