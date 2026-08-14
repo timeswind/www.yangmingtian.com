@@ -61,6 +61,47 @@ const { Content: ZhContent } = await render(zhEntry);
     color: var(--fg);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   }
+
+  /* tweet-feed style for the now page */
+  article[data-lang-content] h1 {
+    font-size: 1.75rem;
+    margin: 0 0 0.4rem;
+  }
+
+  article[data-lang-content] h1 + em,
+  article[data-lang-content] p > em:first-child {
+    display: inline-block;
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.8rem;
+  }
+
+  article[data-lang-content] h2 {
+    font-size: 0.8rem;
+    font-weight: 650;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 2.4rem 0 0.25rem;
+  }
+
+  article[data-lang-content] ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  article[data-lang-content] li {
+    padding: 0.85rem 0;
+    margin: 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--rule) 75%, transparent);
+    font-size: 1.02rem;
+    line-height: 1.55;
+  }
+
+  article[data-lang-content] li:last-child {
+    border-bottom: none;
+  }
 </style>
 
 <script>
