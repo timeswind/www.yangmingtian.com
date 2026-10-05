@@ -2,20 +2,31 @@
 interface Props {
   title?: string;
   description?: string;
+  lang?: string;
 }
 
 const {
   title = 'Yang Mingtian',
   description = 'Personal site of Yang Mingtian — manufacturing, software, and international expansion.',
+  lang = 'en',
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://yangmingtian.com');
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Yang Mingtian" />
+    <meta name="twitter:card" content="summary" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
@@ -36,6 +47,7 @@ const {
         --fg: #1a1a1a;
         --muted: #6b6b6b;
         --bg: #fafaf7;
+        --surface: #ffffff;
         --accent: #b9531a;
         --rule: #e6e3dc;
         --max: 720px;
@@ -46,6 +58,7 @@ const {
           --fg: #ececec;
           --muted: #a0a0a0;
           --bg: #131313;
+          --surface: #1a1a1a;
           --accent: #f0a873;
           --rule: #2a2a2a;
         }
