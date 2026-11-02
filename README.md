@@ -2,7 +2,7 @@
 
 Personal site for [yangmingtian.com](https://yangmingtian.com), built with [Astro](https://astro.build) and deployed to [Cloudflare Workers](https://developers.cloudflare.com/workers/).
 
-The `/now` page is sourced from [`src/content/pages/now.md`](./src/content/pages/now.md). Edit that file to update what's shown at `https://yangmingtian.com/now`.
+The `/now` page is bilingual. English is sourced from [`src/content/pages/now.md`](./src/content/pages/now.md); Chinese is sourced from [`src/content/pages/now-zh.md`](./src/content/pages/now-zh.md). Edit those files to update what's shown at `https://yangmingtian.com/now`. The root-level [`now.md`](./now.md) is not the live source.
 
 ## Develop
 
