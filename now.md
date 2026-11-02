@@ -1,3 +1,5 @@
+> This file is not deployed. The live `/now` page is rendered from `src/content/pages/now.md` (English) and `src/content/pages/now-zh.md` (Chinese).
+
 # Now
 
 _Last updated: May 7, 2026_
